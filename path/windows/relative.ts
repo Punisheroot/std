@@ -68,10 +68,8 @@ export function relative(from: string, to: string): string {
       if (toSegmentCount > maxSharedSegments) {
         return toSegments.slice(sharedSegments).join("\\");
       }
-      if (fromSegmentCount > maxSharedSegments) {
-        return "..\\".repeat(fromSegmentCount - 1 - sharedSegments) + "..";
-      }
-      return "";
+      // Equal-length paths with all segments shared would have returned above.
+      return "..\\".repeat(fromSegmentCount - 1 - sharedSegments) + "..";
     }
 
     return "..\\".repeat(fromSegmentCount - sharedSegments) +
