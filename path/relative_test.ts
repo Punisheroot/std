@@ -47,6 +47,9 @@ const relativeTests = {
     ["c:\\İ\\a\\İ", "c:\\İ\\b\\İ\\test.txt", "..\\..\\b\\İ\\test.txt"],
     ["c:\\i̇\\a\\İ", "c:\\İ\\b\\İ\\test.txt", "..\\..\\b\\İ\\test.txt"],
     ["c:\\ß\\a\\ß", "c:\\ß\\b\\ß\\test.txt", "..\\..\\b\\ß\\test.txt"],
+    ["C:\\", "C:\\İPTV", "İPTV"],
+    ["C:\\İPTV\\player", "C:\\", "..\\.."],
+    ["C:\\İPTV\\player", "D:\\other\\target", "D:\\other\\target"],
   ] as const,
   // arguments          result
   posix: [
